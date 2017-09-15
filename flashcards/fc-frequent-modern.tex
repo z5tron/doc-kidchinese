@@ -1,0 +1,63 @@
+%# -*- coding: utf-8 -*-
+%!TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+% vim:ts=4:sw=4
+%
+% 以上设定默认使用 XeLaTex 编译，并指定 Unicode 编码，供 TeXShop 自动识别
+% avery5388(3x5 index)
+% avery5371(business card 10)
+\documentclass[avery5388,backs]{flashcards}
+\geometry{paperwidth=5.15in,paperheight=3.15in,margin=0pt}
+
+\cardfrontstyle[\large\slshape]{headings}
+\cardbackstyle{empty}
+%\cardfrontfoot{中文}
+\cardfrontfoot{}%四五快读1
+
+\newcommand{\doctitle}{3499常用汉字}
+\newcommand{\docauthor}{Lingyun Yang}
+\newcommand{\dockeywords}{{中文}{汉字}}
+\newcommand{\docsubject}{}
+
+% debug
+\newcommand{\SecDanzi}[1]{#1} % 单字
+\newcommand{\SecCi}[1]{#1} % 词
+\newcommand{\SecJuzi}[1]{#1} % 句子
+
+%\renewcommand{\SecDanzi}[1]{} % 单字
+%\renewcommand{\SecCi}[1]{} % 词
+%\newcommand{\comments}[1]{} % 句子
+
+
+\input{fc-setup}
+
+
+\usepackage{datetime}
+
+
+
+\begin{document}
+
+%\docshowcopyright
+%\docshowtitle{\doctitle}{\docauthor}{%
+%使用双面打印，然后按线剪下。
+%}
+
+
+%\shici{唐诗}{夜思}{唐}{李白}{ %
+%床前明月光，疑是地上霜。\\
+%举头望明月，低头思故乡。
+%}
+
+
+
+\SecDanzi{
+\input{ch3499r}
+%\shizi{228/3499/f=184470}{总}{}
+%\shizi{1/3499/f=7922684}{的}{1}
+%#\shizi{2/3499/f=3050722}{一}{2}
+%\shizi{3/3499/f=2615490}{是}{3}
+}
+
+
+\end{document}
