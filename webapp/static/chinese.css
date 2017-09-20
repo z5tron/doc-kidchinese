@@ -1,0 +1,39 @@
+.main-charword {
+    font-size: 200px;
+    font-family: Georgia, "Times New Roman", KaiTi, STKaiti, serif;
+}
+
+div.container {
+    /* float: left; */
+    width: 500px;
+}
+div.word {
+    /* width: 300px; */
+}
+
+div.control {
+    width: 600px;
+}
+div.word-box {
+    clear: left;
+    margin: 20px 20px 5px 20px;
+}
+
+pre.word-cell {
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 200px;
+    font-family: KaiTi;
+    line-height: 210px;
+}
+
+pre.word-cell.wrong {
+    color: red;
+}
+
+div.control button {
+    margin: 5px 20px 0px 10px;
+    width: 80px;
+}
+

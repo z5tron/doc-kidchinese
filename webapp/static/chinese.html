@@ -1,0 +1,37 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+<link rel="stylesheet" href="/static/chinese.css">
+
+<!-- link rel="stylesheet" href="{{ url_for('static', filename='chinese.css') }}" -->
+</head>
+<body>
+<div id="wordapp">
+<h1><span id="wordId">{{ words.length }} out of {{ totalWords }}</span></h1>
+<div class="" v-for="(word,iw) in words">
+  <div class="word-box" v-if="show(word)">
+    <!-- span>{{ word.wordId }}</span -->
+    <div class="word"><pre id="word" v-bind:class="['word-cell', status(word)]">{{ word.word }}</pre></div>
+    <div class="control">
+      <button id="btn-pass" type="button" name="stat-pass" class="btn btn-success" v-on:click="markPoints(word, 10)">Pass</button>
+      <button id="btn-fail" type="button" name="stat-fail" class="btn btn-danger" v-on:click="markPoints(word, -10)">Fail</button>
+      <button id="btn-skip" type="button" name="stat-skip" class="btn btn-default" v-on:click="skipWord(word)">Skip</button>
+    <p id="wordStat"> id={{word.wordId}}, points={{ word.points }} ({{ word.dateStudy }}), {{ word.books }}</p>
+    </div>
+  </div>
+</div>
+<!-- button id="btn-save" type="button" name="stat-save" class="btn btn-primary btn-lg" v-on:click="saveWords()">Save</button -->
+</div>
+
+<script src="/static/app.js"></script>
+</script>
+</body>
+</html>
