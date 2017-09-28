@@ -1,0 +1,8 @@
+flashcards/*.zh
+flashcards/*.aux
+flashcards/*.out
+flashcards/*.log
+*/*.zh
+*/*.aux
+*/*.out
+*/*.log
