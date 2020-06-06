@@ -1,0 +1,38 @@
+\documentclass[avery5371,grid]{flashcards}
+
+
+\cardfrontstyle[\large\slshape]{headings}
+\cardbackstyle{empty}
+%\cardfrontfoot{中文}
+\cardfrontfoot{}%四五快读1
+
+\newcommand{\doctitle}{四五快读 1}
+\newcommand{\docauthor}{Yunhui Fu}
+\newcommand{\dockeywords}{{中文}{四五快读}}
+\newcommand{\docsubject}{}
+
+% debug
+\newcommand{\SecDanzi}[1]{#1} % 单字
+\newcommand{\SecCi}[1]{#1} % 词
+\newcommand{\SecJuzi}[1]{#1} % 句子
+
+\input{fc-setup}
+
+\usepackage{datetime}
+
+
+
+\begin{document}
+
+\docshowcopyright
+\docshowtitle{\doctitle}{\docauthor}{%
+使用双面打印，然后按线剪下。
+}
+
+
+%% for w in words
+\Sec\VAR{w.type}{\shizi{\VAR{w.chap}}{\VAR{w.text}}{}}
+%% endfor
+
+
+\end{document}

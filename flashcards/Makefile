@@ -15,6 +15,7 @@ SRC_PREFIX= \
     fc-siwukuaidu4 \
     fc-siwukuaidu5 \
     fc-siwukuaidu6 \
+    mlp-shengzi-01 \
     $(NULL)
 
 define SRC_FROM_PREFIX
